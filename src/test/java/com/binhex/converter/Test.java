@@ -5,9 +5,9 @@ package com.binhex.converter;
  */
 public class Test {
     public static void main(String[] args) {
-        String binString = "30";
+        String binString = "toto";
         String convertedBinString = Converter.bin2hex(binString);
-        String hexString = "3330";
+        String hexString = "746f746f";
         String convertedHexString = Converter.hex2bin(hexString);
 
 
@@ -23,12 +23,13 @@ public class Test {
 
         int errors = 0;
         System.out.println("");
-        if (binString != convertedHexString) {
+
+        if (!hexString.equals(convertedBinString)) {
             System.out.println("bin2hex function error");
             errors++;
         }
 
-        if (hexString != convertedBinString) {
+        if (!binString.equals(convertedHexString)) {
             System.out.println("hex2bin function error");
             errors++;
         }
