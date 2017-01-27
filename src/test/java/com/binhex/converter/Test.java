@@ -5,9 +5,9 @@ package com.binhex.converter;
  */
 public class Test {
     public static void main(String[] args) {
-        String binString = "toto";
+        String binString = "toto est arrivé";
         String convertedBinString = Converter.bin2hex(binString);
-        String hexString = "746f746f";
+        String hexString = convertedBinString;
         String convertedHexString = Converter.hex2bin(hexString);
 
 
