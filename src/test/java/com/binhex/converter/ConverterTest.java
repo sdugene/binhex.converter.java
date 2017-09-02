@@ -26,13 +26,7 @@ public class ConverterTest
     @Test
     public void bin2hexTest()
     {
-        String hexaTest = null;
-        try {
-            hexaTest = Converter.bin2hex(text);
-        } catch (Exception e) {
-            assert(false);
-        }
-
+        String hexaTest = Converter.bin2hex(text);
         assertEquals(hexa, hexaTest);
 
         try {
@@ -51,13 +45,7 @@ public class ConverterTest
             assert(true);
         }
 
-        String stringTest = null;
-        try {
-            stringTest = Converter.hex2bin(hexa);
-        } catch (Exception e) {
-            assert(false);
-        }
-
+        String stringTest = Converter.hex2bin(hexa);
         assertEquals(text, stringTest);
     }
 }
