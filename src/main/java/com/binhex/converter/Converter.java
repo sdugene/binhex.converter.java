@@ -2,10 +2,11 @@ package com.binhex.converter;
 
 import java.util.Formatter;
 
-/**
- * Created by Sébastien Dugène on 27/01/2017.
- */
-public class Converter {
+public class Converter
+{
+    private Converter() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static String bin2hex(String binString)
     {
