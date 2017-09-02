@@ -25,6 +25,9 @@ public class Converter
 
     public static String hex2bin(String hexString)
     {
+        if (!hexString.matches("^[0-9a-fA-F]+$")) {
+            return null;
+        }
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < hexString.length(); i+=2) {
             String str = hexString.substring(i, i+2);

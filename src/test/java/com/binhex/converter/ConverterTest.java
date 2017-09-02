@@ -39,11 +39,8 @@ public class ConverterTest
     @Test
     public void hex2binTest()
     {
-        try {
-            Converter.hex2bin("gt");
-        } catch (Exception e) {
-            assert(true);
-        }
+        String Error = Converter.hex2bin("gt");
+        assertEquals(null, Error);
 
         String stringTest = Converter.hex2bin(hexa);
         assertEquals(text, stringTest);
